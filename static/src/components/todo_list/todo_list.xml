@@ -21,7 +21,7 @@
                       <thead>
                         <tr>
                           <th scope="col">Task Description</th>
-                          <th scope="col">Completed</th>
+                          <th scope="col">Color</th>
                           <th scope="col"> </th>
                         </tr>
                       </thead>

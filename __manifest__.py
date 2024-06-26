@@ -2,10 +2,13 @@
     'name':'To-Do List',
     'author':'Nidal SJ',
     'category':'Work',
-    'summary':'To-Do List OWL Framework',
+    'summary':'Odoo Owl',
+    'description': """
+    Creating views using Odoo Owl
+    """,
     'license':'LGPL-3',
     'version':'1.0',
-    'depends': ['base'],
+    'depends': ['base','web'],
     'data':[
         'security/ir.model.access.csv',
         'views/todo_list.xml', 
@@ -19,6 +22,9 @@
             'todo_list/static/src/components/*/*.js',
             'todo_list/static/src/components/*/*.xml',
             'todo_list/static/src/components/*/*.scss',
+            'view_inheritance/static/src/components/*/*.scss',
+            'view_inheritance/static/src/components/*/*.scss',
+            'view_inheritance/static/src/components/*/*.scss',
 
         ],
     },
