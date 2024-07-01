@@ -8,7 +8,7 @@
     """,
     'license':'LGPL-3',
     'version':'1.0',
-    'depends': ['base','web'],
+    'depends': ['base','web','sale','account'],
     'data':[
         'security/ir.model.access.csv',
         'views/todo_list.xml', 

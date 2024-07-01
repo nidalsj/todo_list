@@ -1,12 +1,12 @@
 /** @odoo-module **/
 
-import { registry } from "@web/core/registry";
-import { listView } from "@web/views/list/list_view";
-import { ListController } from "@web/views/list/list_controller";
-import { useService } from "@web/core/utils/hooks";
+import { registry } from "@web/core/registry"
+import { kanbanView } from "@web/views/kanban/kanban_view"
+import { KanbanController } from "@web/views/kanban/kanban_controller"
+import { useService } from "@web/core/utils/hooks"
 
 
-class ResPartnerListController extends ListController {
+class ResPartnerKanbanController extends KanbanController {
     setup(){
         super.setup()
         this.action = useService('action')
@@ -33,10 +33,10 @@ class ResPartnerListController extends ListController {
 
 }
 
-export const resPartnerListView = {
-    ...listView,
-    Controller: ResPartnerListController,
-    buttonTemplate: "owl.ResPartnerListView.Buttons",
+export const resPartnerKanbanView = {
+    ...kanbanView,
+    Controller: ResPartnerKanbanController,
+    buttonTemplate: "owl.ResPartnerKanbanView.Buttons",
 }
 
-registry.category('views').add('res_partner_list_view', resPartnerListView)
+registry.category('views').add('res_partner_kanban_view', resPartnerKanbanView)
