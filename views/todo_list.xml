@@ -60,6 +60,5 @@
         <field name="name">Todo List OWL</field>
         <field name="tag">owl.action_todo_list_js</field>
     </record>
-
-
+               
 </odoo>

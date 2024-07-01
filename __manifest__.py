@@ -22,9 +22,6 @@
             'todo_list/static/src/components/*/*.js',
             'todo_list/static/src/components/*/*.xml',
             'todo_list/static/src/components/*/*.scss',
-            'view_inheritance/static/src/components/*/*.scss',
-            'view_inheritance/static/src/components/*/*.scss',
-            'view_inheritance/static/src/components/*/*.scss',
 
         ],
     },

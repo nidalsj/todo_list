@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
-
     <t t-name="owl.TodoList" owl="1">
         <div class="todo-list-container">
             <div class="row mx-2 mt-3">
@@ -9,7 +8,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search here..." t-ref="search-input" t-on-keyup="searchTasks"/>
+                        <input type="text" class="form-control" placeholder="Search Tasks here..." t-ref="search-input" t-on-keyup="searchTasks"/>
                         <button class="btn btn-outline-primary" t-on-click="searchTasks">Search</button>
                     </div>
                 </div>
@@ -27,6 +26,7 @@
                       </thead>
                       <tbody>
                         <tr t-foreach="state.taskList" t-as="task" t-key="task.id">
+                          <!--t-key ensures each row has a unique id  -->
                           <td>
                               <div class="form-check">
                                   <input class="form-check-input" type="checkbox" value="" t-att-id="task.id" t-att-checked="task.completed" t-on-click="(e)=>this.toggleTask(e,task)"/>
@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <!-- Modal -->
+    <!-- modal pop up  --> 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
