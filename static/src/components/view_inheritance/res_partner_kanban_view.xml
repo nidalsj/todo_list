@@ -14,11 +14,14 @@
                 <h2>Customer Locations</h2>
                 <div class="list-group">
                     <t t-foreach="customerLocations" t-as="c" t-key="c.state_id[0]">
-                        <a href="#" class="list-group-item d-flex justify-content-between align-items-center" t-on-click="()=>this.selectLocations(c.state_id)">
-                            <span t-esc="c.state_id[1] or 'Location not defined'" />
-                            <span t-esc="c.state_id_count" class="badge bg-primary text-white" />
-                        </a>
-
+                        <t t-if="c.state_id[1]">
+                            <a href="#"
+                                class="list-group-item d-flex justify-content-between align-items-center"
+                                t-on-click="()=>this.selectLocations(c.state_id)">
+                                <span t-esc="c.state_id[1] or 'Location not defined'" />
+                                <span t-esc="c.state_id_count" class="badge bg-primary text-white" />
+                            </a>
+                        </t>
                     </t>
                 </div>
             </div>
