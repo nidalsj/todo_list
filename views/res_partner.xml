@@ -40,10 +40,13 @@
                     <attribute name="js_class">res_partner_form_view</attribute>
                     
                 </xpath>
-
+                <!-- <xpath expr="//field[@name='website']" position="before">
+                    <field name="expected_salary" widget="range" />                    
+                </xpath> -->
+                <field name="website" position="before">
+                    <field name="expected_salary" widget="range"/>
+                </field>
             </field>
-        </record>
-    
-    </data>
-    
+        </record>    
+    </data>    
 </odoo>

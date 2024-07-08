@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates>
     <t t-name="owl.ResPartnerFormView" t-inherit="web.FormView" owl="1">
-        <xpath expr="//button[contains(@class, 'o_form_button_create')]" position="after">
-            <button class="btn btn-primary">Go to Website</button>
-        </xpath>
+        <!-- using positional index to locate the correct one -->
+        <!-- <xpath expr="//t[contains(@t-set-slot, 'control-panel-create-button')][1]" position="after">
+            <button class="btn btn-primary">Website</button>    
+        </xpath> -->
+        
     </t>
 </templates>
