@@ -4,12 +4,12 @@
         <Layout display="display">
             <div class="row">
                 <div class="col m-3">
-                    <button class="btn btn-primary">Notification Service</button>
-                    <button class="btn btn-primary ms-2">Dialog Service</button>
-                    <button class="btn btn-primary ms-2">Effect Service</button>
-                    <button class="btn btn-primary ms-2">Cookie Service</button>
-                    <button class="btn btn-primary ms-2">Get Http Service</button>
-                    <button class="btn btn-primary ms-2">Post Http Service</button>
+                    <button class="btn btn-primary" t-on-click="showNotification">Notification Service</button>
+                    <button class="btn btn-primary ms-2" t-on-click="showDialog">Dialog Service</button>
+                    <button class="btn btn-primary ms-2" t-on-click="showEffect">Effect Service</button>
+                    <!-- <button class="btn btn-primary ms-2" t-on-click="setCookieService">Cookie Service</button> -->
+                    <button class="btn btn-primary ms-2" t-on-click="getHttpService">Get Http Service</button>
+                    <button class="btn btn-primary ms-2" t-on-click="postHttpService">Post Http Service</button>
                     <button class="btn btn-primary ms-2">RPC Service</button>
                     <button class="btn btn-primary ms-2">ORM Service</button>
                     <button class="btn btn-primary ms-2">Action Service</button>
@@ -17,10 +17,28 @@
                     <button class="btn btn-primary ms-2">User Service</button>
                     <button class="btn btn-primary ms-2">Company Service</button>
                     <button class="btn btn-primary ms-2">Title Service</button>
-
                 </div>
-                
+            </div>
+            <div class="row">
+                <div class="col">
+                    <!-- TABLE FOR GET METHOD -->
+                    <table class="table mx-4" t-if="state.get_http_data">                                               
+                        <tr t-foreach="state.get_http_data" t-as="data" t-key="data.id">   
+                            <td><span t-esc="data.title" /></td>
+                            <td><span t-esc="data.description" /></td>
+                            <td><span t-esc="data.category" /></td>
+                            <td><span t-esc="data.price" /></td>
+                        </tr>
+                    </table>
 
+                    <!-- TABLE FOR POST METHOD -->
+                    <table class="table mx-4" t-if="state.post_http_data">                                               
+                        <tr>   
+                            <td><span t-esc="state.post_http_data.id" /></td>
+                            <td><span t-esc="state.post_http_data.title" /></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </Layout>
     </t>

@@ -2,7 +2,7 @@
 <odoo>
 
     <record id="action_odoo_services" model="ir.actions.client">
-        <field name="name">Odoo Serices</field>
+        <field name="name">Odoo Services</field>
         <field name="tag">owl.OdooServices</field>
     </record>
 
