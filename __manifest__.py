@@ -14,6 +14,7 @@
         'views/todo_list.xml', 
         'views/menu_items.xml', 
         'views/res_partner.xml', 
+        'views/odoo_services.xml', 
     ],
     'installable': True,
     'auto_install': False,

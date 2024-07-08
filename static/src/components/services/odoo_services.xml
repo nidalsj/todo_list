@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+    <t t-name="owl.OdooServices" owl="1">
+        <Layout display="display">
+            <div class="row">
+                <div class="col m-3">
+                    <button class="btn btn-primary">Notification Service</button>
+                    <button class="btn btn-primary ms-2">Dialog Service</button>
+                    <button class="btn btn-primary ms-2">Effect Service</button>
+                    <button class="btn btn-primary ms-2">Cookie Service</button>
+                    <button class="btn btn-primary ms-2">Get Http Service</button>
+                    <button class="btn btn-primary ms-2">Post Http Service</button>
+                    <button class="btn btn-primary ms-2">RPC Service</button>
+                    <button class="btn btn-primary ms-2">ORM Service</button>
+                    <button class="btn btn-primary ms-2">Action Service</button>
+                    <button class="btn btn-primary ms-2">Router Service</button>
+                    <button class="btn btn-primary ms-2">User Service</button>
+                    <button class="btn btn-primary ms-2">Company Service</button>
+                    <button class="btn btn-primary ms-2">Title Service</button>
+
+                </div>
+                
+
+            </div>
+        </Layout>
+    </t>
+</templates>
