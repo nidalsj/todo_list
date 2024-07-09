@@ -31,9 +31,11 @@ export class OwlOdooServices extends Component {
         this.state = useState({
             get_http_data: [],
             post_http_data: [],
+            rpc_data: [],
         })
 
     }
+
 
     showNotification(){
         const notification = this.env.services.notification
@@ -56,6 +58,7 @@ export class OwlOdooServices extends Component {
         })
     }
 
+
     showDialog(){
         const dialog = this.env.services.dialog
         dialog.add(ConfirmationDialog, {
@@ -74,6 +77,7 @@ export class OwlOdooServices extends Component {
         console.log('this is dialog')
     }
 
+
     showEffect(){
         const effect = this.env.services.effect
         console.log(effect)
@@ -83,9 +87,11 @@ export class OwlOdooServices extends Component {
         })
     }
 
+
     // setCookieService(){
          
     // }
+
 
     async getHttpService(){ //expecting a response
         const http = this.env.services.http
@@ -95,6 +101,7 @@ export class OwlOdooServices extends Component {
         this.state.get_http_data = data.products
     }
 
+
     async postHttpService(){
         const http = this.env.services.http
         console.log(http)
@@ -102,6 +109,15 @@ export class OwlOdooServices extends Component {
         console.log(data)
         this.state.post_http_data = data
     }
+
+
+    async getRpcService(){
+        const rpc = this.env.services.rpc
+        const data = await rpc('/owl/rpc_service') //getting ddetails of res partners
+        console.log(data)
+        this.state.rpc_data = data //adding to rpc
+    }
+
     
 }
 
